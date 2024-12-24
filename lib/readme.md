@@ -1,4 +1,7 @@
 # Odd, Isn't it?
+[Github](https://github.com/ppzreboot/boor)
+| [jsr](https://jsr.io/@ppz/boor)
+
 `@ppz/boor` is a HTTP request router for TypeScript.
 At first glance, `@ppz/boor` seems a little strange.
 This is because `@ppz/boor` requires a specific file directory structure
