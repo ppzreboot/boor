@@ -33,3 +33,10 @@ interface I_x_opts {
   path?: string
   onion?: I_onion
 }
+
+export
+interface I_boor {
+  route_list: I_route[]
+  sow(route: I_route): void
+  harvest(): I_router
+}

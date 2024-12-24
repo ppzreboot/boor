@@ -1,4 +1,4 @@
-import type { I_sow, I_seed_opts, I_x_opts, I_route, I_handler, I_router, I_method } from '../lib/type.ts'
+import type { I_boor, I_sow, I_seed_opts, I_x_opts, I_route, I_handler, I_router, I_method } from './type.ts'
 
 export
 class Seed {
@@ -11,7 +11,7 @@ class Seed {
         handler: opts.onion ? opts.onion(route.handler) : route.handler,
       })
   }
-  X(opts: I_x_opts) {
+  X(opts: I_x_opts): Seed {
     return new Seed({
       ...opts,
       sow: this.sow,
@@ -20,7 +20,7 @@ class Seed {
 }
 
 export
-function Boor() {
+function Boor(): I_boor {
   const route_list: I_route[] = []
   return {
     route_list,
