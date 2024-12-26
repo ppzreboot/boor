@@ -35,8 +35,14 @@ interface I_x_opts {
 }
 
 export
+interface I_seed {
+  sow: I_sow
+  X(opts: I_x_opts): I_seed
+}
+
+export
 interface I_boor {
   route_list: I_route[]
-  sow(route: I_route): void
   harvest(): I_router
+  Seed(opts: Omit<I_seed_opts, 'sow'>): I_seed
 }

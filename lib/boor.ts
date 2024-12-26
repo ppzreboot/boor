@@ -1,7 +1,10 @@
-import type { I_boor, I_sow, I_seed_opts, I_x_opts, I_route, I_handler, I_router, I_method } from './type.ts'
+import type {
+  I_method, I_route, I_handler, I_router,
+  I_sow, I_boor, I_seed,
+  I_seed_opts, I_x_opts,
+} from './type.ts'
 
-export
-class Seed {
+class Seed implements I_seed {
   sow: I_sow
   constructor(opts: I_seed_opts) {
     this.sow = route =>
@@ -24,9 +27,12 @@ function Boor(): I_boor {
   const route_list: I_route[] = []
   return {
     route_list,
-    sow(route: I_route) {
-      route_list.push(route)
-    },
+    Seed: opts => new Seed({
+      ...opts,
+      sow(route: I_route) {
+        route_list.push(route)
+      }
+    }),
     harvest(): I_router {
       const map: Record<string, Record<string, I_handler | undefined> | undefined> = {}
       for (const r of route_list) {
