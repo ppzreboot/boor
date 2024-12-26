@@ -1,11 +1,10 @@
-import { Seed, Boor } from '@ppz/boor'
+import { Boor } from '@ppz/boor'
 
 export
 const boor = Boor()
 
 export
-const seed = new Seed({
-  sow: boor.sow,
+const seed = boor.Seed({
   path: '/api',
   onion: handler => async (req, url) => {
     const request_id = crypto.randomUUID()
