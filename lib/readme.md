@@ -5,7 +5,8 @@
 
 `Boor` is an HTTP request router for TypeScript.
 At first glance, `Boor` seems a little odd.
-This is because `Boor` requires a specific file directory structure
+This is because `Boor` requires
+[a specific file directory structure](https://github.com/ppzreboot/boor/tree/main/demo)
 to fully showcase its strengths.
 
 ## Usage
