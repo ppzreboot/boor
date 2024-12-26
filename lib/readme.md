@@ -1,10 +1,11 @@
-# Odd, Isn't it?
 [Github](https://github.com/ppzreboot/boor)
 | [jsr](https://jsr.io/@ppz/boor)
 
-`@ppz/boor` is an HTTP request router for TypeScript.
-At first glance, `@ppz/boor` seems a little odd.
-This is because `@ppz/boor` requires a specific file directory structure
+# Odd, Isn't it?
+
+`Boor` is an HTTP request router for TypeScript.
+At first glance, `Boor` seems a little odd.
+This is because `Boor` requires a specific file directory structure
 to fully showcase its strengths.
 
 ## Usage
