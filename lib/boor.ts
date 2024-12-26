@@ -4,6 +4,7 @@ import type {
   I_seed_opts, I_x_opts,
 } from './type.ts'
 
+/** The seed of routes. */
 class Seed implements I_seed {
   sow: I_sow
   constructor(opts: I_seed_opts) {
@@ -14,6 +15,8 @@ class Seed implements I_seed {
         handler: opts.onion ? opts.onion(route.handler) : route.handler,
       })
   }
+
+  /** Make a mutated Seed instance. */
   X(opts: I_x_opts): Seed {
     return new Seed({
       ...opts,
@@ -22,6 +25,7 @@ class Seed implements I_seed {
   }
 }
 
+/** Create a Boor instance. */
 export
 function Boor(): I_boor {
   const route_list: I_route[] = []
