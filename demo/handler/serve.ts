@@ -2,12 +2,12 @@ import { I_method } from '@ppz/boor'
 import { boor } from './seed.ts'
 import './harvest.ts'
 
-const router = boor.harvest()
-for (const route of boor.route_list)
-  console.log(route.method, route.path)
-
 export
 function serve(opts: Deno.ServeTcpOptions) {
+  const router = boor.harvest()
+  for (const route of boor.route_list)
+    console.log(route.method, route.path)
+
   Deno.serve(opts, req => {
     const url = new URL(req.url)
     const handler = router(req.method as I_method, url.pathname)
